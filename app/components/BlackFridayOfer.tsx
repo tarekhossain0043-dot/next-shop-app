@@ -5,7 +5,10 @@ import { X } from "lucide-react";
 export default function BlackFridayOfer() {
   const [blackFridayOffer, setBlackFridayOffer] = useState(true);
   return (
-    <div className="bg-gray-900 py-4.5 text-white relative">
+    <div
+      className="bg-gray-900 py-4.5 text-white relative transition-all duration-300 ease-in-out scroll-smooth"
+      style={blackFridayOffer ? { display: "block" } : { display: "none" }}
+    >
       <div className="mx-auto px-2 sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
         <div className="flex items-center justify-between">
           {/* left */}
@@ -30,10 +33,7 @@ export default function BlackFridayOfer() {
             </span>
           </div>
           {/* right */}
-          <div
-            className="max-[600px]:hidden"
-            style={blackFridayOffer ? { display: "flex" } : { display: "none" }}
-          >
+          <div className="max-[600px]:hidden">
             <Btn typed="" />
           </div>
           <span
